@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 //mui-components
 import Grid from "@mui/material/Grid";
 import AppBar from "@mui/material/AppBar";
@@ -44,24 +44,28 @@ const Navbar = () => {
 							sx={{ display: "flex", flexDirection: "row" }}>
 							{navbarItems.map((item, index) => (
 								<Grid key={index}>
-									<Typography
-										sx={{
-											fontSize: "14px",
-											color: item.color,
-											ml: "1cm",
-											lineHeight: "18px",
-											fontFamily: "Manrope",
-										}}>
-										{item.title}
-										{item.icon === "true" ? (
-											<ArrowOutwardIcon
-												fontSize="14px"
-												paddingTop="20px"
-											/>
-										) : (
-											""
-										)}
-									</Typography>
+									<Link
+										to={item.link}
+										style={{ textDecoration: "none" }}>
+										<Typography
+											sx={{
+												fontSize: "14px",
+												color: item.color,
+												ml: "1cm",
+												lineHeight: "18px",
+												fontFamily: "Manrope",
+											}}>
+											{item.title}
+											{item.icon === "true" ? (
+												<ArrowOutwardIcon
+													fontSize="14px"
+													paddingTop="20px"
+												/>
+											) : (
+												""
+											)}
+										</Typography>
+									</Link>
 								</Grid>
 							))}
 						</Grid>

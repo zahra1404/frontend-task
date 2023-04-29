@@ -5,7 +5,7 @@ import Grid from "@mui/material/Grid";
 import { Button, Typography } from "@mui/material";
 import TextField from "@mui/material/TextField";
 
-const SignUp = () => {
+const SignUp = (props) => {
 	return (
 		<Grid
 			container
@@ -23,7 +23,7 @@ const SignUp = () => {
 						lineHeight: "48px",
 						color: " #0E0E0E",
 					}}>
-					Sign Up For Environment News & Alerts
+					{props.heading}
 				</Typography>
 				<Typography
 					sx={{
@@ -35,9 +35,7 @@ const SignUp = () => {
 						color: "#575757",
 						mt: "0.5cm",
 					}}>
-					We are bringing worldwide concerns and solutions fresh to
-					your emails. As opposed to what others do, we make our
-					contributions timely.
+					{props.desc}
 				</Typography>
 				<TextField
 					id="outlined-basic"

@@ -2,10 +2,10 @@ import React from "react";
 
 //mui-components
 import Grid from "@mui/material/Grid";
+import { Typography } from "@mui/material";
 
 //data
 import progress from "../data/progress";
-import { Typography } from "@mui/material";
 
 const Progress = () => {
 	return (

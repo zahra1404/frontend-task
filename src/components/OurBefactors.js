@@ -1,6 +1,12 @@
 import React from "react";
-import Heading from "./Heading";
+
+//mui-components
 import { Box, Grid, Typography } from "@mui/material";
+
+//components
+import Heading from "./Heading";
+
+//data
 import ourBefactors from "../data/ourBefactors";
 
 const OurBefactors = () => {
@@ -13,12 +19,15 @@ const OurBefactors = () => {
 			<Grid container sx={{ justifyContent: "center", p: "1cm 1cm" }}>
 				{ourBefactors.map((item, index) => (
 					<Grid item md={3.8} key={index} sx={{ pt: "1cm" }}>
-						<img
-							src={item.img}
-							alt="volunteer name"
-							width="323.54px"
-							height="283.93px"
-						/>
+						<Box>
+							<img
+								src={item.img}
+								alt="volunteer name"
+								width="323.54px"
+								height="283.93px"
+							/>
+						</Box>
+
 						<Typography
 							sx={{
 								fontFamily: "Manrope",

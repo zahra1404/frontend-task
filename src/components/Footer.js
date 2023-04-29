@@ -106,6 +106,7 @@ const Footer = () => {
 						id="outlined-basic"
 						label="Enter your email address"
 						variant="outlined"
+						color="success"
 						style={{
 							width: "12cm",
 							margin: "25px 0px",

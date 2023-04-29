@@ -1,28 +1,27 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 //mui-components
 import Box from "@mui/material/Box";
 
 //components
 import Navbar from "./components/Navbar";
-import Header from "./components/Header";
-import ProjectAssistanceProgram from "./components/ProjectAssistanceProgram";
-import Progress from "./components/Progress";
-import GetInTouch from "./components/GetInTouch";
-import OurBefactors from "./components/OurBefactors";
-import Companies from "./components/Companies";
-import SignUp from "./components/SignUp";
+
 import Footer from "./components/Footer";
+
+import OurCauses from "./pages/our-causes";
+import Home from "./pages/home";
 
 function App() {
 	return (
 		<Box>
-			<Navbar />
-			<Header />
-			<ProjectAssistanceProgram />
-			<Progress />
-			<GetInTouch />
-			<OurBefactors />
-			<Companies />
-			<SignUp />
+			<BrowserRouter>
+				<Navbar />
+				<Routes>
+					<Route exact path="/" element={<Home />} />
+					<Route path="/our-causes" element={<OurCauses />} />
+				</Routes>
+			</BrowserRouter>
+
 			<Footer />
 		</Box>
 	);

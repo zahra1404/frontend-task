@@ -7,7 +7,7 @@ import { Typography } from "@mui/material";
 const Companies = () => {
 	return (
 		<>
-			<Grid container sx={{ justifyContent: "center" }}>
+			<Grid container sx={{ justifyContent: "center", m: "2cm 0cm" }}>
 				<Grid item md={4} sx={{ m: "2cm" }}>
 					<Typography
 						sx={{
